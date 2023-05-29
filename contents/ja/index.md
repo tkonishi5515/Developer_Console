@@ -1,5 +1,5 @@
 ---
-title: DevOpsCente について
+title: 開発者コンソールについて
 marp: true
 paginate: true
 theme: freud
@@ -16,9 +16,9 @@ theme: freud
 
 ![Slides are here](images/qrcode.png)
 
-##### スライド:https://tkonishi5515.github.io/devopsCenter/ja//index
+##### スライド:https://tkonishi5515.github.io/Developer_Console/ja/index
 
-##### リポジトリ:https://github.com/tkonishi5515/devopsCenter
+##### リポジトリ:https://github.com/tkonishi5515/Developer_Console
 
 ---
 
