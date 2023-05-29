@@ -1,5 +1,5 @@
 ---
-title: DevOpsCenter について
+title: DevOpsCente について
 marp: true
 paginate: true
 theme: freud
