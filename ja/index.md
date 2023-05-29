@@ -63,15 +63,19 @@ theme: freud
 
 ---
 
-# Lightning Web Components と Aura の違いは？
+# 開発者コンソールでできること
 
-- 共通点
-  - Saleforce 上での見た目はほぼ同じ([SLDS](https://www.lightningdesignsystem.com/)を標準で使用)
-  - classic 未対応
-  - HTML と JavaScript を用いた開発
-  - 外部 JavaScript ライブラリの[使用可能](https://developer.salesforce.com/docs/component-library/documentation/ja-jp/56.0/lwc/lwc.js_third_party_library)(静的リソースで読み込ませる)
-  - [Tailwind CSS](https://tailwindcss.com/)のようにクラス名でスタイルを与えることができる
-    - そのため、SLDS でよければ CSS ファイルは不要
+## Trailhead より抜粋
+
+1. **Apex クラスやトリガー、Aura コンポーネント、Visualforce ページやコンポーネント**などに移動して開き、作成・編集する
+2. 組織で作成したパッケージを参照する
+3. **デバッグ用のログを生成して、さまざまな視点から分析**する
+4. 自分の **Apex コードをテストして、エラーがないことを確認**する
+5. Apex コードにチェックポイントを設定し、エラーを特定して解決する
+6. 組織のレコードを**検索、作成、更新する SOQL と SOSL クエリを記述して実行**する
+
+→ 開発は、開発者コンソールで**ほとんど**行うことができる
+(※現代の開発環境からはかけ離れていますが...)
 
 ---
 
