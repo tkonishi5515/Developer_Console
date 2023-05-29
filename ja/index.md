@@ -34,21 +34,32 @@ theme: freud
 
 # トピックス
 
-1. 開発者コンソールとは？
+1. 開発者コンソールとは
 2. 開発者コンソールでできること
 3. 非開発者にもおすすめな機能
 4. 実践(demo)
 
 ---
 
-# DevOps Center とは
+# 開発者コンソールとは
 
-- [トレイル](https://trailhead.salesforce.com/ja/content/learn/modules/devops-center-quick-look/say-hello-to-devops-center?trailmix_creator_id=jimsharp&trailmix_slug=learn-dev-ops-center)に簡単に記載されている
-- 恐ろしいことに「変更セットが気に入っている場合は、心配しないでください。現時点では廃止されません。」と記載されています。
+## 基礎知識
 
-  - 将来的に変更セットを廃止する？
+[開発者コンソールの基礎](https://trailhead.salesforce.com/ja/content/learn/modules/developer_console)に使い方やできることは記載されています
 
-- github を
+## 開き方
+
+みなさんも開いてみましょう
+
+1. 設定のギアアイコンを押下する
+2. 「開発者コンソール」と記載された箇所があるため押下する
+3. 開発者コンソールが開かれる
+
+---
+
+# 開発者コンソールとは
+
+- 開発者コンソールのスクリーンショットを追加したい
 
 ---
 
