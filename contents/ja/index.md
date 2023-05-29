@@ -9,7 +9,7 @@ theme: freud
 <!-- theme: gradient class: blue-->
 <!-- theme: freud class: blue-->
 
-# DevOpsCenter について <!-- fit -->
+# 開発者コンソールについて <!-- fit -->
 
 </br>
 </br>
@@ -26,20 +26,18 @@ theme: freud
 
 #### 今回の話すこと
 
-- そもそも
-- DevOps は GitHub との連携機能です
-- Lightning Web Components の簡単な説明と Aura との比較を行います
-- 今回 Lightning Web Components の開発を行うための環境構築等の詳細な説明はしません
+- 使い方をデモを含めて共有します
+- vsCode の方が優れているところを共有します
+- vsCode の詳細な設定方法は説明しません
 
 ---
 
 # トピックス
 
-1. DevOps とは？
-2. なぜ DevOps が必要なのか
-3. DevOpsCenter と変更セット
-4. DevOpsCenter の触り
-5. 実践
+1. 開発者コンソールとは？
+2. 開発者コンソールでできること
+3. 非開発者にもおすすめな機能
+4. 実践(demo)
 
 ---
 
