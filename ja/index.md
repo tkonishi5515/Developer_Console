@@ -84,7 +84,7 @@ theme: freud
 
 ## **Apex クラスやトリガー、Aura コンポーネント、Visualforce ページやコンポーネント**などに移動して開き、作成・編集する
 
-- 画面右上の「File」を押下 →「open」を選択する
+- 画面左上の「File」を押下 →「open」を選択する
   ![height:400](images/開発者コンソール_02.png)
 
 ---
