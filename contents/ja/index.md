@@ -80,15 +80,12 @@ theme: freud
 
 ---
 
-# Lightning Web Components と Aura の違いは？
+# 開発者コンソールでできること
 
-- 相違点
-  - Aura は開発者コンソールで作成・開発が可能だが、LWC は Visual Studio Code が必要([Chrome の拡張機能](https://chrome.google.com/webstore/detail/lightning-studio/ehkpneicmpbdejpoancidgkejlkahjgo?hl=ja)で代替品有)
-  - LWC はユニットテスト[Jest](https://jestjs.io/ja/)に対応している
-  - LWC で対応していない機能がまだある、その場合は Aura を使用する必要あり(一部モバイル対応など)
-  - Aura は開発がアーカイブ化されている(サポートはしている)
-    [Aura 開発リポジトリ](https://github.com/forcedotcom/aura)
-    [LWC 開発リポジトリ](https://github.com/salesforce/lwc)
+## **Apex クラスやトリガー、Aura コンポーネント、Visualforce ページやコンポーネント**などに移動して開き、作成・編集する
+
+- 画面右上の「File」を押下 →「open」を選択する
+  ![height:400](images/開発者コンソール_02.png)
 
 ---
 
