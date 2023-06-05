@@ -156,27 +156,15 @@ theme: freud
 - **ログインしているユーザのログのみ表示可能**
 - デバッグログを仕込む必要なし(デバッグレベルは SFDC_DevConsole )
   - デバッグレベルも開発者コンソールで変更可能
-    ![height:300](images/開発者コンソール_06.png)
 
 ---
 
-# なぜ Lightning Web Components を選択するのか
+# 開発者コンソールでできること
 
-- Aura で作成されるファイル数
-  - 全部が必要なわけではないが。。。
-
-```markdown
-プロジェクト名(任意で設定可能)
-├ auradoc
-├ cmp(HTML)
-├ cmp-meta.xml
-├ css
-├ design
-├ svg
-├ Controller.js
-├ Helper.js
-└ Render.js
-```
+1. Debug → Change Log Levels を開く
+2. General Trace Settings for You の「Add/Change」を押下
+3. 変更したいデバッグレベルを選択する
+   ![height:400](images/開発者コンソール_06.png)
 
 ---
 
