@@ -82,10 +82,10 @@ theme: freud
 
 # 開発者コンソールでできること
 
-## **Apex クラスやトリガー、Aura コンポーネント、Visualforce ページやコンポーネント**などの作成を作成する
+## **Apex クラスやトリガー、Aura コンポーネント、Visualforce ページやコンポーネント**などの作成を行う
 
-- 画面左上の「File」を押下 →「open」を選択する
-  ![height:400](images/開発者コンソール_02.png)
+- 画面左上の「File」を押下 →「New」を選択する
+  ![height:400](images/開発者コンソール_03.png)
 
 ---
 
@@ -93,20 +93,26 @@ theme: freud
 
 ## **Apex クラスやトリガー、Aura コンポーネント、Visualforce ページやコンポーネント**などに移動して編集する
 
-- 画面左上の「File」を押下 →「open」を選択し編集したいクラスを開き編集する
+- 画面左上の「File」を押下 →「Open」を選択し編集したいクラスを開き編集する
   ![height:400](images/開発者コンソール_02.png)
 
 ---
 
-# Lightning Web Components と Aura の違いは？
+# 開発者コンソールでできること
 
-- Visualforce との比較
-  - 共通点
-    - あまりない
-  - 相違点
-    - LWC の コントローラーは JavaScript(ブラウザ動作),Visualforce のコントローラーは Apex(サーバ動作)
-      そのため、LWC のパフォーマンスが良い
-    - モバイル上での対応が Aura と LWC の方が優れている
+### 作成できるコンポーネント
+
+- Apex
+- Visualforce
+  - Visualforce Page:一つで Web ページが作成される
+  - Visualforce Component:再利用可能な UI 部品
+- 静的リソース(JavaScript)
+- Lightning コンポーネント(Aura)
+  - Lightning Application: 画面から作成するアプリケーションとは別物
+  - Lightning Component:よく使う Aura コンポーネント
+  - Lightning Interface:Aura で使用する共通処理を定義する
+  - Lightning Event:コンポーネント同士をつなぐ
+  - Lightning Tokens:Aura コンポーネント上のスタイルを一元で管理
 
 ---
 
