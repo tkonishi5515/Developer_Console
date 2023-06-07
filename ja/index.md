@@ -36,7 +36,7 @@ theme: freud
 
 1. 開発者コンソールとは
 2. 開発者コンソールでできること
-3. ダミーデータ作成
+3. ダミーデータ作成(テストデータ)
 4. 実践(demo)
 5. 星取り表？
 
@@ -193,9 +193,29 @@ theme: freud
 
 ---
 
-# 作成した Lightning Web Components の紹介
+# ダミーデータ作成(テストデータ)
 
-- 勉強会の環境に一部デプロイします
+1. Debug → Open Execute Anonymous Window を押下(または ctrl + E)
+2. Enter Apex Code というウィンドウが開きます
+
+![height:400](images/開発者コンソール_09.png)
+
+---
+
+# ダミーデータ作成(テストデータ)
+
+3. Enter Apex Code に下記コードを入力し、Execute を押下
+4. 取引先に test0~test9 まで作成される
+
+```Java
+List<Account> acts = new List<Account>();
+    for (Integer i = 0; i < 10; i++) {
+      Account act = new Account();
+      act.Name = 'test' + i;
+      acts.add(act);
+    }
+    insert acts;
+```
 
 ---
 
