@@ -195,6 +195,8 @@ theme: freud
 
 # ダミーデータ作成(テストデータ)
 
+## ご自身の Dev 環境などでお試しください。
+
 1. Debug → Open Execute Anonymous Window を押下(または ctrl + E)
 2. Enter Apex Code というウィンドウが開きます
 
