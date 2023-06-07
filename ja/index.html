@@ -31,7 +31,6 @@
 <ol>
 <li>開発者コンソールとは</li>
 <li>開発者コンソールでできること</li>
-<li>非開発者にもおすすめな機能</li>
 <li>ダミーデータ作成</li>
 <li>実践(demo)</li>
 <li>星取り表？</li>
@@ -140,6 +139,7 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-marpit-pagination="13" data-marpit-pagination-total="19" style="--paginate:true;">
 <h1 id="%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8-7">開発者コンソールでできること</h1>
 <h2 id="%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E7%94%A8%E3%81%AE%E3%83%AD%E3%82%B0%E3%82%92%E7%94%9F%E6%88%90%E3%81%97%E3%81%A6%E3%81%95%E3%81%BE%E3%81%96%E3%81%BE%E3%81%AA%E8%A6%96%E7%82%B9%E3%81%8B%E3%82%89%E5%88%86%E6%9E%90%E3%81%99%E3%82%8B-1"><strong>デバッグ用のログを生成して、さまざまな視点から分析</strong>する</h2>
+<h2 id="%E9%96%8B%E7%99%BA%E3%82%92%E3%81%97%E3%81%AA%E3%81%84%E6%96%B9%E3%82%82%E3%81%8A%E3%81%99%E3%81%99%E3%82%81">開発をしない方もおすすめ！</h2>
 <h3 id="%E3%83%AD%E3%82%B0%E3%81%AE%E6%B3%A8%E6%84%8F%E7%82%B9">ログの注意点</h3>
 <ul>
 <li><strong>ログインしているユーザのログのみ表示可能</strong></li>
@@ -160,40 +160,26 @@
 </ol>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-marpit-pagination="15" data-marpit-pagination-total="19" style="--paginate:true;">
-<h1 id="%E3%81%AA%E3%81%9C-lightning-web-components-%E3%82%92%E9%81%B8%E6%8A%9E%E3%81%99%E3%82%8B%E3%81%AE%E3%81%8B">なぜ Lightning Web Components を選択するのか</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">slds-p-left_xx-large</span>&gt;</span>{hello}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-</code></pre>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-JavaScript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">LightningElement</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;lwc&#x27;</span>;
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">LightningElement</span> {
-  hello = <span class="hljs-string">&#x27;Hello,World!&#x27;</span>
-}
-</code></pre>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span>?&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">LightningComponentBundle</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://soap.sforce.com/2006/04/metadata&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">apiVersion</span>&gt;</span>56.0<span class="hljs-tag">&lt;/<span class="hljs-name">apiVersion</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">isExposed</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">isExposed</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">LightningComponentBundle</span>&gt;</span>
-</code></pre>
+<h1 id="%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8-9">開発者コンソールでできること</h1>
+<ul>
+<li>自分の <strong>Apex コードをテストして、エラーがないことを確認</strong>する</li>
+</ul>
+<ol>
+<li>Test → New Run を開く</li>
+<li>対象のテストクラスと実行するメソッドを選択</li>
+<li>実行したテストクラスで通った箇所、カバレッジ率を確認可能</li>
+</ol>
+<p><img src="images/%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB_07.png" alt="" style="height:400px;" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-marpit-pagination="16" data-marpit-pagination-total="19" style="--paginate:true;">
-<h1 id="lwc-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E6%A1%88%E4%BB%B6%E7%B4%B9%E4%BB%8B">LWC を使用した案件紹介</h1>
+<h1 id="%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8-10">開発者コンソールでできること</h1>
+<p>組織のレコードを<strong>検索、作成、更新する SOQL と SOSL クエリを記述して実行</strong>する</p>
 <ol>
-<li>Experience Cloud に B to C と B to B 向けの Web ページを開発</li>
+<li>Query Editor タブを押下</li>
+<li>SOQL または SOQL を入力</li>
+<li>結果が表示されインライン編集可能</li>
 </ol>
-<ul>
-<li>B to C のページは独自のデザインだったため、CSS を使用していた</li>
-<li>B to B の方は LDS だったが、ソースレビューや GitHub で管理を行いたかったため LWC で開発をおこなった</li>
-</ul>
-<ol start="2">
-<li>ルックアップ検索条件に表示されるレコードの条件を変更したい</li>
-</ol>
-<ul>
-<li>画面フローでは実装不可だったため LWC を使用した</li>
-<li>その後、保存ボタンを動的に動かしたり、項目全て入力されたら保存ボタンの色を変えたりと色々した</li>
-</ul>
+<p><img src="images/%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB_08.png" alt="" style="height:400px;" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-marpit-pagination="17" data-marpit-pagination-total="19" style="--paginate:true;">
 <h1 id="%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F-lightning-web-components-%E3%81%AE%E7%B4%B9%E4%BB%8B">作成した Lightning Web Components の紹介</h1>

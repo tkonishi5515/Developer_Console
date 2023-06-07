@@ -36,10 +36,9 @@ theme: freud
 
 1. 開発者コンソールとは
 2. 開発者コンソールでできること
-3. 非開発者にもおすすめな機能
-4. ダミーデータ作成
-5. 実践(demo)
-6. 星取り表？
+3. ダミーデータ作成
+4. 実践(demo)
+5. 星取り表？
 
 ---
 
@@ -151,6 +150,8 @@ theme: freud
 
 ## **デバッグ用のログを生成して、さまざまな視点から分析**する
 
+## 開発をしない方もおすすめ！
+
 ### ログの注意点
 
 - **ログインしているユーザのログのみ表示可能**
@@ -168,43 +169,27 @@ theme: freud
 
 ---
 
-# なぜ Lightning Web Components を選択するのか
+# 開発者コンソールでできること
 
-```html
-<template>
-  <div slds-p-left_xx-large>{hello}</div>
-</template>
-```
+- 自分の **Apex コードをテストして、エラーがないことを確認**する
 
-```JavaScript
-import { LightningElement } from 'lwc';
+1. Test → New Run を開く
+2. 対象のテストクラスと実行するメソッドを選択
+3. 実行したテストクラスで通った箇所、カバレッジ率を確認可能
 
-export default class Test extends LightningElement {
-  hello = 'Hello,World!'
-}
-```
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>56.0</apiVersion>
-    <isExposed>true</isExposed>
-</LightningComponentBundle>
-```
+![height:400](images/開発者コンソール_07.png)
 
 ---
 
-# LWC を使用した案件紹介
+# 開発者コンソールでできること
 
-1. Experience Cloud に B to C と B to B 向けの Web ページを開発
+組織のレコードを**検索、作成、更新する SOQL と SOSL クエリを記述して実行**する
 
-- B to C のページは独自のデザインだったため、CSS を使用していた
-- B to B の方は LDS だったが、ソースレビューや GitHub で管理を行いたかったため LWC で開発をおこなった
+1. Query Editor タブを押下
+2. SOQL または SOQL を入力
+3. 結果が表示されインライン編集可能
 
-2. ルックアップ検索条件に表示されるレコードの条件を変更したい
-
-- 画面フローでは実装不可だったため LWC を使用した
-- その後、保存ボタンを動的に動かしたり、項目全て入力されたら保存ボタンの色を変えたりと色々した
+![height:400](images/開発者コンソール_08.png)
 
 ---
 
