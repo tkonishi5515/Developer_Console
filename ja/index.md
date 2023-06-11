@@ -36,9 +36,8 @@ theme: freud
 
 1. 開発者コンソールとは
 2. 開発者コンソールでできること
-3. Apex コードの実行
-4. 実践(demo)
-5. 星取り表？
+3. Apex コードの実行(匿名実行)
+4. vsCode との比較
 
 ---
 
@@ -240,21 +239,21 @@ Database.executeBatch(ab, 200);
 
 ---
 
-# おまけ
+# vsCode との比較
 
-```Java
-List<Account> acts = new List<Account>();
-    for (Integer i = 0; i < 10; i++) {
-      Account act = new Account();
-      act.Name = 'test' + i;
-      acts.add(act);
-    }
-    insert acts;
-```
+| 機能                                | 開発者コンソール | vsCode |
+| ----------------------------------- | ---------------- | ------ |
+| Apex,Aura,Visualforce の作成,更新   | △                | ◎      |
+| デバッグの確認                      | ◯                | △      |
+| Apex のテスト実行                   | ◯                | ◯      |
+| SOQL,SOSL の実行 (クエリエディター) | ◯                | △      |
+| Apex コードの実行(匿名実行)         | ◯                | △      |
+
+※ LWC の作成、更新やメタデータの管理は開発者コンソールでは不可
 
 ---
 
 # まとめ
 
-- Aura と LWC の違いはさまざまあるが、基本 LWC を使用しよう
-- 画面フローで実装可能な場合は、画面フローで実装しよう
+- Apex や Visualforce を実際に記載する際は、vsCode の方が扱いやすい
+- ただ、Apex を匿名実行したい場合や、SOQL クエリを使いたい場合は開発者コンソールの方が楽に実行ができる
