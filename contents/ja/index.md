@@ -195,8 +195,6 @@ theme: freud
 
 # Apex コードの実行
 
-## ご自身の Dev 環境などでお試しください。
-
 1. Debug → Open Execute Anonymous Window を押下(または ctrl + E)
 2. Enter Apex Code というウィンドウが開きます
 
@@ -206,8 +204,43 @@ theme: freud
 
 # Apex コードの実行
 
+## ご自身の Dev 環境などでお試しください。
+
+### 1. Apex クラスの動作確認(ログも確認可能)
+
+### 2. レコードの取得・作成・更新・削除(SOQL と DML 操作)
+
 3. Enter Apex Code に下記コードを入力し、Execute を押下
-4. 取引先に test0~test9 まで作成される
+4. 取引先に test が作成される
+
+```Java
+    Account act = new Account();
+    act.Name = 'test';
+    insert act;
+    System.debug(act.Id);
+
+    Account resultAct = [SELECT Id, Name FROM Account WHERE Id = :act.Id];
+    System.debug(resultAct);
+```
+
+---
+
+# Apex コードの実行
+
+## Apex バッチの起動
+
+- スケジュールしていない時でも、任意でバッチの呼び出しが可能
+
+```java
+//呼び出すバッチをインスタンス化
+AccountBatch ab = new AccountBatch();
+//バッチを起動(200はバッチサイズ)
+Database.executeBatch(ab, 200);
+```
+
+---
+
+# おまけ
 
 ```Java
 List<Account> acts = new List<Account>();
@@ -218,16 +251,6 @@ List<Account> acts = new List<Account>();
     }
     insert acts;
 ```
-
----
-
-# おまけ
-
-- LWC は Salesforce の外でも使用することが可能
-- [lwc.dev](https://lwc.dev/)という web ページがあり、こちらに詳細が記載されている
-- Heroku や web サーバーにデプロイすることで使用可能
-- メインの HTML と JavaScript の書き方はほぼ同じ
-- 興味のある方は「OSS LWC」などで検索してみてください
 
 ---
 
