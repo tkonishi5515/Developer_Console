@@ -48,7 +48,7 @@ theme: freud
 
 ## 開き方
 
-みなさんも自分も Dev 環境などで、開いてみましょう
+みなさんもご自身の Dev 環境などで、開いてみましょう
 
 1. 設定のギアアイコンを押下する
 2. 「開発者コンソール」と記載された箇所があるため押下する
@@ -120,7 +120,7 @@ theme: freud
 
 - Apex
 - Visualforce
-- オブジェクト
+- **オブジェクト**
   - 項目の API 参照名と、型が表示される
 - 静的リソース
 - パッケージ(メタデータ要素のグループ化)
@@ -148,17 +148,28 @@ theme: freud
 
 ## **デバッグ用のログを生成して、さまざまな視点から分析**する
 
-## 開発をしない方もおすすめ！
-
 ### ログの注意点
 
 - **ログインしているユーザのログのみ表示可能**
 - デバッグログを仕込む必要なし(デバッグレベルは SFDC_DevConsole )
-  - デバッグレベルも開発者コンソールで変更可能
+  - デバッグレベルは設定、または開発者コンソールで変更可能
 
 ---
 
 # 開発者コンソールでできること
+
+ログの確認方法
+
+1. ガバナ制限の一覧が表示される。
+2. デバッグレベルによって、表示が変更される
+3. Debug Only のチェックボックスにチェックを入れることで、Apex 上で System.debug と記載した内容のみを表示することができる
+   ![height:385](images/開発者コンソール_10.png)
+
+---
+
+# 開発者コンソールでできること
+
+### ログレベルの変更方法(開発者コンソールで行う場合)
 
 1. Debug → Change Log Levels を開く
 2. General Trace Settings for You の「Add/Change」を押下
@@ -169,7 +180,7 @@ theme: freud
 
 # 開発者コンソールでできること
 
-- 自分の **Apex コードをテストして、エラーがないことを確認**する
+自分の **Apex コードをテストして、エラーがないことを確認**する
 
 1. Test → New Run を開く
 2. 対象のテストクラスと実行するメソッドを選択
@@ -193,7 +204,17 @@ theme: freud
 
 # Apex コードの実行
 
-1. Debug → Open Execute Anonymous Window を押下(または ctrl + E)
+### 1. Apex クラスの動作確認(ログも確認可能)
+
+### 2. レコードの取得・作成・更新・削除(SOQL と DML 操作)
+
+---
+
+# Apex コードの実行
+
+ご自身の Dev 環境などでお試しください。
+
+1. Debug → Open Execute Anonymous Window を押下(または ctrl + E, cmd + E)
 2. Enter Apex Code というウィンドウが開きます
 
 ![height:400](images/開発者コンソール_09.png)
@@ -202,12 +223,6 @@ theme: freud
 
 # Apex コードの実行
 
-## ご自身の Dev 環境などでお試しください。
-
-### 1. Apex クラスの動作確認(ログも確認可能)
-
-### 2. レコードの取得・作成・更新・削除(SOQL と DML 操作)
-
 3. Enter Apex Code に下記コードを入力し、Execute を押下
 4. 取引先に test が作成される
 
@@ -215,9 +230,11 @@ theme: freud
     Account act = new Account();
     act.Name = 'test';
     insert act;
+    //作成した取引先のIdがログに表示される
     System.debug(act.Id);
 
     Account resultAct = [SELECT Id, Name FROM Account WHERE Id = :act.Id];
+    //作成した取引先をSOQLで取得し、IdとNameを表示する
     System.debug(resultAct);
 ```
 
