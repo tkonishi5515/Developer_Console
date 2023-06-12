@@ -229,6 +229,7 @@ theme: freud
 
 3. Enter Apex Code に下記コードを入力し、Execute を押下
 4. 取引先に test が作成される
+   ※SOQL は Query Editor でも実行可能
 
 ```Java
     Account act = new Account();
