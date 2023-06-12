@@ -27,7 +27,7 @@ theme: freud
 #### 今回の話すこと
 
 - 使い方をデモを含めて共有します
-- 開発者コンソールの基本的な使用方法をお伝えします。
+- 開発者コンソールの基本的な使用方法をお伝えします
 
 ---
 
@@ -160,7 +160,7 @@ theme: freud
 
 ログの確認方法
 
-1. ガバナ制限の一覧が表示される。
+1. ガバナ制限の一覧が表示される
 2. デバッグレベルによって、表示が変更される
 3. Debug Only のチェックボックスにチェックを入れることで、Apex 上で System.debug と記載した内容のみを表示することができる
    ![height:385](images/開発者コンソール_10.png)
@@ -208,11 +208,15 @@ theme: freud
 
 ### 2. レコードの取得・作成・更新・削除(SOQL と DML 操作)
 
+### 3. Apex クラスではなく、Apex コードを記載し匿名で実行する
+
+### 4. 作成した Apex クラスの呼び出しも可能
+
 ---
 
 # Apex コードの実行
 
-ご自身の Dev 環境などでお試しください。
+ご自身の Dev 環境などでお試しください
 
 1. Debug → Open Execute Anonymous Window を押下(または ctrl + E, cmd + E)
 2. Enter Apex Code というウィンドウが開きます
@@ -251,6 +255,34 @@ theme: freud
 AccountBatch ab = new AccountBatch();
 //バッチを起動(200はバッチサイズ)
 Database.executeBatch(ab, 200);
+```
+
+---
+
+# Apex コードの実行(おまけ)
+
+- 先ほど試したコードを Apex クラスにすると下記
+
+```java
+public without sharing class AccountController {
+  public static void createAccount(){
+      Account act = new Account();
+      act.Name = 'test';
+      insert act;
+      //作成した取引先のIdがログに表示される
+      System.debug(act.Id);
+
+      Account resultAct = [SELECT Id, Name FROM Account WHERE Id = :act.Id];
+      //作成した取引先をSOQLで取得し、IdとNameを表示する
+      System.debug(resultAct);
+  }
+}
+```
+
+- 下記 Apex コードを実行し、Apex クラスを起動する
+
+```java
+AccountController.createAccount();
 ```
 
 ---
