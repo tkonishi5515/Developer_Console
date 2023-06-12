@@ -208,6 +208,10 @@ theme: freud
 
 ### 2. レコードの取得・作成・更新・削除(SOQL と DML 操作)
 
+### 3. Apex クラスではなく、Apex コードを記載し匿名で実行する
+
+### 4. 作成した Apex クラスの呼び出しも可能
+
 ---
 
 # Apex コードの実行
@@ -251,6 +255,34 @@ theme: freud
 AccountBatch ab = new AccountBatch();
 //バッチを起動(200はバッチサイズ)
 Database.executeBatch(ab, 200);
+```
+
+---
+
+# Apex コードの実行(おまけ)
+
+- 先ほど試したコードを Apex クラスにすると下記
+
+```java
+public without sharing class AccountController {
+  public static void createAccount(){
+      Account act = new Account();
+      act.Name = 'test';
+      insert act;
+      //作成した取引先のIdがログに表示される
+      System.debug(act.Id);
+
+      Account resultAct = [SELECT Id, Name FROM Account WHERE Id = :act.Id];
+      //作成した取引先をSOQLで取得し、IdとNameを表示する
+      System.debug(resultAct);
+  }
+}
+```
+
+- 下記 Apex コードを実行し、Apex クラスを起動する
+
+```java
+AccountController.createAccount();
 ```
 
 ---
